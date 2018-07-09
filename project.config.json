@@ -4,12 +4,13 @@
 		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
-		"minified": true
+		"minified": true,
+		"newFeature": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.1.1",
-	"appid": "wxf49681b1c58c8c42",
-	"projectname": "pilgrimage",
+	"appid": "wx31fdb7fb145c79bf",
+	"projectname": "dreamland",
 	"scripts": {},
 	"condition": {
 		"search": {
@@ -32,5 +33,6 @@
 			"current": -1,
 			"list": []
 		}
-	}
+	},
+  "cloudfunctionRoot": "./cloud-functions"
 }

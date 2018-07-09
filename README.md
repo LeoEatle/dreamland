@@ -1,0 +1,1 @@
+This project is for testing wechatapp cloud function.
