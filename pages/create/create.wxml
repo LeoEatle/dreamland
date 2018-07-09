@@ -1,0 +1,55 @@
+<!--pages/create/create.wxml-->
+<view class="create_page">
+
+  <view class="form_block scene_title">
+    <view class="title_label">标题</view>
+    <input bindinput="onInputTitle" class="flex_bottom title_input" type="text" placeholder="取个有趣的标题吧" />
+  </view>
+
+  <view class="form_block scene_textarea">
+    <view class="title_label">介绍</view>
+    <textarea bindinput="onInputDescription" class="flex_bottom title_area" maxlength="{{140}}" placeholder="介绍一下为什么这个场景是你心中的圣地" />
+  </view>
+
+  <view class="form_block">
+    <view class="title_label">Tag</view>
+    <input bindinput="onInputTag" class="flex_bottom" type="text" placeholder="请输入相关作品名（包括书名号）" />
+  </view>
+
+  <view class="form_block">
+    <view class="title_label">地点位置</view>
+    <input bindinput="onInputLocation" class="flex_bottom" type="text" placeholder="圣地的大概位置（如 东京 池袋 西口公园）"/>
+  </view>
+<!-- 
+  <view class="form_block scene_location">
+    <view class="title_label">位置</view>
+      <view class="flex_right">
+        <button bindtap="openLocation" class="btn location_btn flex_right">打开地图选择位置</button>
+      <view class="location_info">名称：{{location.name}}</view>
+      <view class="location_info">地址：{{location.address}}</view>
+      </view>
+  </view> -->
+
+  
+
+  <view class="form_block scene_img">
+    <view class="title_label">截图</view>
+    <!-- <button bindtap="chooseScreenShot" plain="{{true}}" class="flex_right btn">添加新截图</button> -->
+    <view class="choose_imgs">
+      <button bindtap="chooseScreenShot" class="add_img">
+        +
+      </button>
+      <view wx:for="{{photo_list}}" wx:for-index="index" wx:key="{{index}}" class="thumbnail">
+        <image mode="aspectFit" class="thumbnail_img" src="{{item}}"></image>
+      </view>
+    </view>
+  </view>
+
+<!-- 
+    <scroll-view scroll-x="{{false}}" scroll-y="{{true}} " class="scroll_list">
+    <view wx:if="{{photo_list.length === 0}}" class="empty_tip">还没有添加截图</view>
+    <image mode="widthFix" wx:for="{{photo_list}}" wx:for-index="index" wx:key="{{index}}" src="{{item}}" class="photo_thumbnail"></image>
+    </scroll-view> -->
+
+  <button bindtap="uploadScreenShot" class="btn finish_btn">完成并创建</button>
+</view>

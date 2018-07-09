@@ -1,0 +1,93 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scene_container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  padding: 0rpx 20rpx;
+}
+
+.scene_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 40rpx;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 5px rgba(0,0,0,.2), 0 2px 2px rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12);
+}
+
+.scene_img {
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.scene_main {
+  padding: 10px;
+}
+
+.scene_name {
+  width: auto;
+  height: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #212121;
+}
+
+.scene_description {
+  width: 90%;
+  line-height: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #757575;
+}
+
+.scene_info {
+  display: flex;
+
+  margin-top: 5px;
+  padding-top: 10px;
+  border-top: 1px solid #bdbdbd;
+  color: #757575;
+  font-size: 14px;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mgr {
+  margin-right: 10px;
+}
+
+.scene_tag {
+  flex: 1;
+}
+
+.scene_location {
+  flex: 1;
+}
+
+.create_button {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 5px;
+  right: 5px;
+  width: 40px;
+  height: 40px;
+  padding-top: 2px;
+  border-radius: 50%;
+  background-color: #ffeb3b;
+  box-shadow: 0 1px 5px rgba(0,0,0,.2), 0 2px 2px rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12);
+}
+

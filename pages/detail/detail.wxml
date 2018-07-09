@@ -1,0 +1,32 @@
+<!--pages/detail/detail.wxml-->
+<view class="detail-container">
+    <view class="cover-img-wrapper">
+        <image 
+            mode="widthFix" 
+            class="cover-img"
+            src="{{coverImgUrl}}">
+        </image>
+    </view>
+    <view class="content">
+        <text class="scene-name">{{sceneName}}</text>
+        <view class="scene-info">
+          <view class="scene-tag">
+            <text class="tag-icon fa fa-tag"></text>
+            <text>{{sceneTag}}</text>
+          </view>
+          <view class="scene-location">
+            <text class="tag-icon fa fa-map-marker"></text>
+            <text>{{sceneLocation}}</text>
+          </view>
+        </view>
+        <text class="scene-intro">{{sceneIntro}}</text>
+        <view wx:for="{{imageList}}">
+            <image
+                mode="aspectFill"
+                class="image-item"
+                src="{{item.url}}">
+            </image>
+        </view>
+        <text class="scene-">{{sceneMore}}</text>
+    </view>
+</view>

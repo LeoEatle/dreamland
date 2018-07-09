@@ -1,0 +1,46 @@
+<!--index.wxml-->
+<view class="container">
+
+  
+
+  <view class='scene_container'>
+    <tab></tab>
+    <view 
+      wx:for="{{scene_list}}" 
+      wx:for-index="index" 
+      wx:key="{{index}}" 
+      class="scene_item"
+      data-id="{{item.id}}"
+      bindtap="bindGoDetail"
+       >
+      <image mode="widthFix" class="scene_img" src="{{item.imgUrl}}"></image>
+      <view class="scene_main">
+        <view class="scene_name">{{item.name}}</view>
+        <view class="scene_description">
+          {{item.description}}
+        </view>
+        <view class="scene_info">
+          <view class="scene_tag">
+            <text class="mgr fa fa-tag"></text>
+            <text>{{item.tag}}</text>
+          </view>
+          <view class="scene_location">
+            <text class="mgr fa fa-map-marker"></text>
+            <text>{{item.location}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  <button bindtap="bindGoCreate" class="create_button">
+    <text class="select_icon fa fa-plus"></text>
+  </button>
+  <!--<view  class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>-->
+
+  <view class="me">
+
+  </view>
+</view>

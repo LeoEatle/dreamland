@@ -1,0 +1,19 @@
+<!--pages/me/me.wxml-->
+<view class="container">
+  <view class="top">
+    <view class="tab_bar">
+      <view id="explore" bindtap="backToExplore" class="{{active.explore}}">EXPLORE</view>
+      <view id="me" bindtap="togglePage" class="{{active.me}}">ME</view>
+    </view>
+  </view>
+
+  <view class="content">
+    <view class="avatar">
+
+    </view>
+
+    <view class="select_item"><text class="select_icon fa fa-user"></text><text class="select_text">我创建的场景</text><text class="fa fa-arrow-circle-right select_arrow"></text></view>
+    <view class="select_item"><text class="select_icon fa fa-star"></text><text class="select_text">我收藏的场景</text><text class="fa fa-arrow-circle-right select_arrow"></text></view>
+    <view class="select_item"><text class="select_icon fa fa-info"></text><text class="select_text">关于圣地巡礼</text><text class="fa fa-arrow-circle-right select_arrow"></text></view>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+<!--components/tab/tab.wxml-->
+<view class="top">
+  <view class="tab_bar">
+    <view id="explore" bindtap="togglePage" class="{{active === 'explore' ? 'tab_item_active': 'tab_item'}}">探索</view>
+    <view id="me" bindtap="togglePage" class="{{active === 'me' ? 'tab_item_active': 'tab_item'}}">我</view>
+  </view>
+</view>
