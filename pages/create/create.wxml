@@ -39,7 +39,7 @@
       <button bindtap="chooseScreenShot" class="add_img">
         +
       </button>
-      <view wx:for="{{photo_list}}" wx:for-index="index" wx:key="{{index}}" class="thumbnail">
+      <view wx:for="{{imgList}}" wx:for-index="index" wx:key="{{index}}" class="thumbnail">
         <image mode="aspectFit" class="thumbnail_img" src="{{item}}"></image>
       </view>
     </view>
@@ -51,5 +51,5 @@
     <image mode="widthFix" wx:for="{{photo_list}}" wx:for-index="index" wx:key="{{index}}" src="{{item}}" class="photo_thumbnail"></image>
     </scroll-view> -->
 
-  <button bindtap="uploadScreenShot" class="btn finish_btn">完成并创建</button>
+  <button bindtap="uploadScene" class="btn finish_btn">{{buttonText}}</button>
 </view>

@@ -1,4 +1,7 @@
 /**index.wxss**/
+.container {
+  height: 100%;
+}
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -7,23 +10,25 @@
 
 .scene_container {
   margin-top: 40px;
-  display: flex;
-  flex-direction: column;
   padding: 0rpx 20rpx;
 }
 
 .scene_item {
+  width: 700rpx;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   margin-bottom: 40rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
   border-radius: 5px;
   background-color: #ffffff;
   box-shadow: 0 1px 5px rgba(0,0,0,.2), 0 2px 2px rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12);
 }
 
 .scene_img {
-  width: 100%;
+  width: 700rpx;
+  height: 500rpx;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -68,12 +73,16 @@
   margin-right: 10px;
 }
 
-.scene_tag {
+.scene_tag, .scene_location {
   flex: 1;
+  padding: 0px 20rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
 }
 
-.scene_location {
-  flex: 1;
+.scene_info_text {
+  height: 20px;
 }
 
 .create_button {

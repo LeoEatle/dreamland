@@ -16,6 +16,16 @@ function formatNumber(n) {
   return n[1] ? n : '0' + n
 }
 
+function formatImgUrl(path) {
+  if (!/^https?/.test(path) && !/^\/\//.test(path)) {
+    // 这里暂时是固定的url地址，但是以后小程序云可能会变（——heyli）
+    let fileName = path.split('/').slice(-1)[0]
+    path = `https://dreamland-6e1ecf-1256746843.cos.ap-shanghai.myqcloud.com/scene/${fileName}`
+  }
+  return path
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  formatImgUrl: formatImgUrl
 }

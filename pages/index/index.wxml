@@ -13,20 +13,20 @@
       data-id="{{item.id}}"
       bindtap="bindGoDetail"
        >
-      <image mode="widthFix" class="scene_img" src="{{item.imgUrl}}"></image>
+      <image mode="aspectFill" class="scene_img" src="{{item.cover_img}}"></image>
       <view class="scene_main">
-        <view class="scene_name">{{item.name}}</view>
+        <view class="scene_name">{{item.title}}</view>
         <view class="scene_description">
           {{item.description}}
         </view>
         <view class="scene_info">
           <view class="scene_tag">
             <text class="mgr fa fa-tag"></text>
-            <text>{{item.tag}}</text>
+            <text class="scene_info_text">{{item.tag}}</text>
           </view>
           <view class="scene_location">
             <text class="mgr fa fa-map-marker"></text>
-            <text>{{item.location}}</text>
+            <text class="scene_info_text">{{item.location_name}}</text>
           </view>
         </view>
       </view>

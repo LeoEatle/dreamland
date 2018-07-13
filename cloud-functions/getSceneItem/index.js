@@ -12,7 +12,6 @@ app.init(appConfig)
 exports.main = async (event, context) => {
     const db = app.database()
     const sceneCollection = db.collection('scene')
-    const sceneList = []
     const result = await sceneCollection.get()
     return result
 }
@@ -21,7 +20,6 @@ exports.main = async (event, context) => {
 // exports.main = (event, context) => {
 //     const db = app.database()
 //     const sceneCollection = db.collection('scene')
-//     const sceneList = []
 //     sceneCollection.get().then(res => {
 //         resolve(res)
 //     }).catch(err => {

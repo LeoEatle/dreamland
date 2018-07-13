@@ -88,13 +88,23 @@ Page({
   },
 
   onLoad: function () {
-    var that = this
-    //调用应用实例的方法获取全局数据
-    // app.getUserInfo(function(userInfo){
-    //   //更新数据
-    //   that.setData({
-    //     userInfo:userInfo
-    //   })
-    // })
+    // 通过云服务器获取列表
+    this.fetchSceneList()
+  },
+
+  onShow: function() {
+    // 创建完成等情况回到首页需要重新刷新首页
+    this.fetchSceneList()
+  },
+
+  fetchSceneList: function() {
+    const db = wx.cloud.database()
+    const sceneCollection = db.collection('scene')
+    sceneCollection.get().then(res => {
+        console.log('res', res)
+        this.setData({
+          scene_list: res.data
+        })
+    })
   }
 })
